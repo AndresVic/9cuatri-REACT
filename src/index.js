@@ -11,6 +11,7 @@
 // informacion2.appendChild(objeto2)
 
 // ReactDOM
+import { func } from 'prop-types'
 import React from 'react-dom'
 import ReactDom from 'react-dom'
 
@@ -65,3 +66,49 @@ const objeto4 = <div>
 const informacion4 = document.getElementById('mate')
 
 ReactDom.render(objeto4, informacion4)
+
+// ----------------------------------------------------------------
+
+function datos1(){
+  return <div>
+    <b>Funcion N°1</b>
+  </div>
+}
+
+function datos2(numeros, texto){
+  const resta = numeros.num2 - numeros.num4;
+  return texto +": "+ numeros.num1 + " != " + numeros.num2 + " || " + resta
+}
+
+function datos3(numero) {
+  if (numero > 5) {
+    return <p>{numero} es mayor que 5</p>
+  }else{
+    return <p>{numero} es menor que 5</p>
+  }
+}
+
+const texto = "NúMeRoS"
+
+const numero = 2;
+
+let listaNumerica = [];
+const listaNumeros = () => {
+  for(var x = 0; x<=10; x++){
+    listaNumerica.push(<li>{x}</li>);
+  }
+  return listaNumerica;
+}
+
+const objeto5 = <div>
+  <h2>Funciones</h2>
+  {datos1()}
+  {datos2(numeros, texto)}<br />
+  <p>Lista de Números: 0 - 10</p>
+  <ul>{listaNumeros()}</ul>
+</div>
+
+const informacion5 = document.getElementById('funciones')
+
+
+ReactDom.render(objeto5, informacion5)
