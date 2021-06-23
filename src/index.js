@@ -10,6 +10,7 @@
 // const informacion2 = document.getElementById('info')
 // informacion2.appendChild(objeto2)
 
+// ReactDOM
 import React from 'react-dom'
 import ReactDom from 'react-dom'
 
