@@ -1,17 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// const objeto = document.createElement('h2')
+//   objeto.innerText = 'UTVT 2021'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// const objeto2 = document.createElement('b')
+//   objeto.innerText = 'Ing. Desarrollo y Gestíon de Software'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const informacion = document.getElementById('root')
+// informacion.appendChild(objeto)
+
+// const informacion2 = document.getElementById('info')
+// informacion2.appendChild(objeto2)
+
+import React from 'react-dom'
+import ReactDom from 'react-dom'
+
+const objeto = <h2>UTVT - 2021</h2>
+const informacion = document.getElementById('info')
+ReactDom.render(objeto, informacion)
+
+const objeto2 = <b>Esto es una prueba ReactDom</b>
+const informacion2 = document.getElementById('info2')
+ReactDom.render(objeto2, informacion2)
